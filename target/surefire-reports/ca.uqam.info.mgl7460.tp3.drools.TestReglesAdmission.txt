@@ -1,0 +1,60 @@
+-------------------------------------------------------------------------------
+Test set: ca.uqam.info.mgl7460.tp3.drools.TestReglesAdmission
+-------------------------------------------------------------------------------
+Tests run: 7, Failures: 0, Errors: 7, Skipped: 0, Time elapsed: 0.010 s <<< FAILURE! -- in ca.uqam.info.mgl7460.tp3.drools.TestReglesAdmission
+ca.uqam.info.mgl7460.tp3.drools.TestReglesAdmission.testDemandeMauvaiseBaseAdmission -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "ca.uqam.info.mgl7460.tp3.types.FabriqueGestionAdmissions.creerEtudiant(String, String, String)" because "ca.uqam.info.mgl7460.tp3.drools.TestHarness.fabrique" is null
+	at ca.uqam.info.mgl7460.tp3.drools.TestHarness.creerDemandeMauvaiseBaseAdmission(TestHarness.java:201)
+	at ca.uqam.info.mgl7460.tp3.drools.TestReglesAdmission.testDemandeMauvaiseBaseAdmission(TestReglesAdmission.java:92)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+ca.uqam.info.mgl7460.tp3.drools.TestReglesAdmission.testDemandeRefuseeBaseCEGEPSansCoteR -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "ca.uqam.info.mgl7460.tp3.types.FabriqueGestionAdmissions.creerEtudiant(String, String, String)" because "ca.uqam.info.mgl7460.tp3.drools.TestHarness.fabrique" is null
+	at ca.uqam.info.mgl7460.tp3.drools.TestHarness.creerDemandeRefuseeBaseCEGEPSansCoteR(TestHarness.java:59)
+	at ca.uqam.info.mgl7460.tp3.drools.TestReglesAdmission.testDemandeRefuseeBaseCEGEPSansCoteR(TestReglesAdmission.java:38)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+ca.uqam.info.mgl7460.tp3.drools.TestReglesAdmission.testDemandeDossierVide -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "ca.uqam.info.mgl7460.tp3.types.FabriqueGestionAdmissions.creerEtudiant(String, String, String)" because "ca.uqam.info.mgl7460.tp3.drools.TestHarness.fabrique" is null
+	at ca.uqam.info.mgl7460.tp3.drools.TestHarness.creerDemandeDossierVide(TestHarness.java:243)
+	at ca.uqam.info.mgl7460.tp3.drools.TestReglesAdmission.testDemandeDossierVide(TestReglesAdmission.java:73)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+ca.uqam.info.mgl7460.tp3.drools.TestReglesAdmission.testDemandeMoyennePlusfaibleCriteresAdmission -- Time elapsed: 0 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "ca.uqam.info.mgl7460.tp3.types.FabriqueGestionAdmissions.creerEtudiant(String, String, String)" because "ca.uqam.info.mgl7460.tp3.drools.TestHarness.fabrique" is null
+	at ca.uqam.info.mgl7460.tp3.drools.TestHarness.creerDemandeMoyennePlusfaibleQueCriteresAdmission(TestHarness.java:118)
+	at ca.uqam.info.mgl7460.tp3.drools.TestReglesAdmission.testDemandeMoyennePlusfaibleCriteresAdmission(TestReglesAdmission.java:129)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+ca.uqam.info.mgl7460.tp3.drools.TestReglesAdmission.testDemandeDocumentFrauduleux -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "ca.uqam.info.mgl7460.tp3.types.FabriqueGestionAdmissions.creerEtudiant(String, String, String)" because "ca.uqam.info.mgl7460.tp3.drools.TestHarness.fabrique" is null
+	at ca.uqam.info.mgl7460.tp3.drools.TestHarness.creerDemandeFrauduleuse(TestHarness.java:89)
+	at ca.uqam.info.mgl7460.tp3.drools.TestReglesAdmission.testDemandeDocumentFrauduleux(TestReglesAdmission.java:55)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+ca.uqam.info.mgl7460.tp3.drools.TestReglesAdmission.testDemandeAcceptee -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "ca.uqam.info.mgl7460.tp3.types.FabriqueGestionAdmissions.creerEtudiant(String, String, String)" because "ca.uqam.info.mgl7460.tp3.drools.TestHarness.fabrique" is null
+	at ca.uqam.info.mgl7460.tp3.drools.TestHarness.creerDemandeAdmissionAcceptee(TestHarness.java:29)
+	at ca.uqam.info.mgl7460.tp3.drools.TestReglesAdmission.testDemandeAcceptee(TestReglesAdmission.java:147)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+ca.uqam.info.mgl7460.tp3.drools.TestReglesAdmission.testDemandeBaseExperienceSansPreuve -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "ca.uqam.info.mgl7460.tp3.types.FabriqueGestionAdmissions.creerEtudiant(String, String, String)" because "ca.uqam.info.mgl7460.tp3.drools.TestHarness.fabrique" is null
+	at ca.uqam.info.mgl7460.tp3.drools.TestHarness.creerDemandeBaseExperienceSansPreuve(TestHarness.java:160)
+	at ca.uqam.info.mgl7460.tp3.drools.TestReglesAdmission.testDemandeBaseExperienceSansPreuve(TestReglesAdmission.java:111)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+

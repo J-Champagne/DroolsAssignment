@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="ca.uqam.info.mgl7460.tp3.drools.TestReglesAdmission" time="0.01" tests="7" errors="7" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="17"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/Users/jac/Downloads/version_avec_cucumber/target/test-classes:/Users/jac/Downloads/version_avec_cucumber/target/classes:/Users/jac/.m2/repository/io/cucumber/cucumber-java/7.20.1/cucumber-java-7.20.1.jar:/Users/jac/.m2/repository/io/cucumber/cucumber-core/7.20.1/cucumber-core-7.20.1.jar:/Users/jac/.m2/repository/io/cucumber/cucumber-gherkin/7.20.1/cucumber-gherkin-7.20.1.jar:/Users/jac/.m2/repository/io/cucumber/cucumber-gherkin-messages/7.20.1/cucumber-gherkin-messages-7.20.1.jar:/Users/jac/.m2/repository/io/cucumber/gherkin/28.0.0/gherkin-28.0.0.jar:/Users/jac/.m2/repository/io/cucumber/messages/24.1.0/messages-24.1.0.jar:/Users/jac/.m2/repository/io/cucumber/testng-xml-formatter/0.2.0/testng-xml-formatter-0.2.0.jar:/Users/jac/.m2/repository/io/cucumber/query/12.2.0/query-12.2.0.jar:/Users/jac/.m2/repository/io/cucumber/tag-expressions/6.1.0/tag-expressions-6.1.0.jar:/Users/jac/.m2/repository/io/cucumber/cucumber-expressions/17.1.0/cucumber-expressions-17.1.0.jar:/Users/jac/.m2/repository/io/cucumber/datatable/7.20.1/datatable-7.20.1.jar:/Users/jac/.m2/repository/io/cucumber/cucumber-plugin/7.20.1/cucumber-plugin-7.20.1.jar:/Users/jac/.m2/repository/io/cucumber/docstring/7.20.1/docstring-7.20.1.jar:/Users/jac/.m2/repository/io/cucumber/html-formatter/21.7.0/html-formatter-21.7.0.jar:/Users/jac/.m2/repository/io/cucumber/junit-xml-formatter/0.5.0/junit-xml-formatter-0.5.0.jar:/Users/jac/.m2/repository/io/cucumber/ci-environment/10.0.1/ci-environment-10.0.1.jar:/Users/jac/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/jac/.m2/repository/io/cucumber/cucumber-junit-platform-engine/7.20.1/cucumber-junit-platform-engine-7.20.1.jar:/Users/jac/.m2/repository/org/junit/platform/junit-platform-engine/1.11.3/junit-platform-engine-1.11.3.jar:/Users/jac/.m2/repository/org/drools/drools-ruleunits-engine/8.44.0.Final/drools-ruleunits-engine-8.44.0.Final.jar:/Users/jac/.m2/repository/org/drools/drools-ruleunits-dsl/8.44.0.Final/drools-ruleunits-dsl-8.44.0.Final.jar:/Users/jac/.m2/repository/org/drools/drools-canonical-model/8.44.0.Final/drools-canonical-model-8.44.0.Final.jar:/Users/jac/.m2/repository/org/drools/drools-model-compiler/8.44.0.Final/drools-model-compiler-8.44.0.Final.jar:/Users/jac/.m2/repository/org/kie/kie-api/8.44.0.Final/kie-api-8.44.0.Final.jar:/Users/jac/.m2/repository/org/kie/kie-internal/8.44.0.Final/kie-internal-8.44.0.Final.jar:/Users/jac/.m2/repository/org/kie/kie-util-maven-support/8.44.0.Final/kie-util-maven-support-8.44.0.Final.jar:/Users/jac/.m2/repository/org/drools/drools-wiring-api/8.44.0.Final/drools-wiring-api-8.44.0.Final.jar:/Users/jac/.m2/repository/org/kie/kie-memory-compiler/8.44.0.Final/kie-memory-compiler-8.44.0.Final.jar:/Users/jac/.m2/repository/org/drools/drools-core/8.44.0.Final/drools-core-8.44.0.Final.jar:/Users/jac/.m2/repository/org/kie/kie-util-xml/8.44.0.Final/kie-util-xml-8.44.0.Final.jar:/Users/jac/.m2/repository/org/drools/drools-base/8.44.0.Final/drools-base-8.44.0.Final.jar:/Users/jac/.m2/repository/org/drools/drools-wiring-static/8.44.0.Final/drools-wiring-static-8.44.0.Final.jar:/Users/jac/.m2/repository/org/drools/drools-io/8.44.0.Final/drools-io-8.44.0.Final.jar:/Users/jac/.m2/repository/commons-codec/commons-codec/1.15/commons-codec-1.15.jar:/Users/jac/.m2/repository/org/drools/drools-compiler/8.44.0.Final/drools-compiler-8.44.0.Final.jar:/Users/jac/.m2/repository/org/drools/drools-drl-parser/8.44.0.Final/drools-drl-parser-8.44.0.Final.jar:/Users/jac/.m2/repository/org/drools/drools-drl-extensions/8.44.0.Final/drools-drl-extensions-8.44.0.Final.jar:/Users/jac/.m2/repository/org/drools/drools-drl-ast/8.44.0.Final/drools-drl-ast-8.44.0.Final.jar:/Users/jac/.m2/repository/org/drools/drools-kiesession/8.44.0.Final/drools-kiesession-8.44.0.Final.jar:/Users/jac/.m2/repository/org/drools/drools-ecj/8.44.0.Final/drools-ecj-8.44.0.Final.jar:/Users/jac/.m2/repository/org/eclipse/jdt/ecj/3.33.0/ecj-3.33.0.jar:/Users/jac/.m2/repository/org/antlr/antlr-runtime/3.5.2/antlr-runtime-3.5.2.jar:/Users/jac/.m2/repository/org/drools/drools-ruleunits-impl/8.44.0.Final/drools-ruleunits-impl-8.44.0.Final.jar:/Users/jac/.m2/repository/org/drools/drools-ruleunits-api/8.44.0.Final/drools-ruleunits-api-8.44.0.Final.jar:/Users/jac/.m2/repository/org/drools/drools-model-codegen/8.44.0.Final/drools-model-codegen-8.44.0.Final.jar:/Users/jac/.m2/repository/org/drools/drools-util/8.44.0.Final/drools-util-8.44.0.Final.jar:/Users/jac/.m2/repository/org/drools/drools-codegen-common/8.44.0.Final/drools-codegen-common-8.44.0.Final.jar:/Users/jac/.m2/repository/com/github/javaparser/javaparser-core/3.24.2/javaparser-core-3.24.2.jar:/Users/jac/.m2/repository/org/drools/drools-mvel-parser/8.44.0.Final/drools-mvel-parser-8.44.0.Final.jar:/Users/jac/.m2/repository/org/drools/drools-mvel-compiler/8.44.0.Final/drools-mvel-compiler-8.44.0.Final.jar:/Users/jac/.m2/repository/org/slf4j/slf4j-api/1.7.30/slf4j-api-1.7.30.jar:/Users/jac/.m2/repository/org/junit/platform/junit-platform-suite/1.11.3/junit-platform-suite-1.11.3.jar:/Users/jac/.m2/repository/org/junit/platform/junit-platform-suite-api/1.11.3/junit-platform-suite-api-1.11.3.jar:/Users/jac/.m2/repository/org/junit/platform/junit-platform-suite-engine/1.11.3/junit-platform-suite-engine-1.11.3.jar:/Users/jac/.m2/repository/org/junit/platform/junit-platform-suite-commons/1.11.3/junit-platform-suite-commons-1.11.3.jar:/Users/jac/.m2/repository/org/junit/platform/junit-platform-launcher/1.11.3/junit-platform-launcher-1.11.3.jar:/Users/jac/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.11.3/junit-jupiter-api-5.11.3.jar:/Users/jac/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/jac/.m2/repository/org/junit/platform/junit-platform-commons/1.11.3/junit-platform-commons-1.11.3.jar:/Users/jac/.m2/repository/ch/qos/logback/logback-classic/1.2.9/logback-classic-1.2.9.jar:/Users/jac/.m2/repository/ch/qos/logback/logback-core/1.2.9/logback-core-1.2.9.jar:"/>
+    <property name="java.vm.vendor" value="SAP SE"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://sapmachine.io/"/>
+    <property name="user.timezone" value="America/Toronto"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="java.vm.specification.version" value="17"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="CA"/>
+    <property name="sun.boot.library.path" value="/Users/jac/.sdkman/candidates/java/17.0.12-sapmchn/lib"/>
+    <property name="sun.java.command" value="/Users/jac/Downloads/version_avec_cucumber/target/surefire/surefirebooter-20250210141801396_3.jar /Users/jac/Downloads/version_avec_cucumber/target/surefire 2025-02-10T14-18-01_349-jvmRun1 surefire-20250210141801396_1tmp surefire_0-20250210141801396_2tmp"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/Users/jac/Downloads/version_avec_cucumber/target/test-classes:/Users/jac/Downloads/version_avec_cucumber/target/classes:/Users/jac/.m2/repository/io/cucumber/cucumber-java/7.20.1/cucumber-java-7.20.1.jar:/Users/jac/.m2/repository/io/cucumber/cucumber-core/7.20.1/cucumber-core-7.20.1.jar:/Users/jac/.m2/repository/io/cucumber/cucumber-gherkin/7.20.1/cucumber-gherkin-7.20.1.jar:/Users/jac/.m2/repository/io/cucumber/cucumber-gherkin-messages/7.20.1/cucumber-gherkin-messages-7.20.1.jar:/Users/jac/.m2/repository/io/cucumber/gherkin/28.0.0/gherkin-28.0.0.jar:/Users/jac/.m2/repository/io/cucumber/messages/24.1.0/messages-24.1.0.jar:/Users/jac/.m2/repository/io/cucumber/testng-xml-formatter/0.2.0/testng-xml-formatter-0.2.0.jar:/Users/jac/.m2/repository/io/cucumber/query/12.2.0/query-12.2.0.jar:/Users/jac/.m2/repository/io/cucumber/tag-expressions/6.1.0/tag-expressions-6.1.0.jar:/Users/jac/.m2/repository/io/cucumber/cucumber-expressions/17.1.0/cucumber-expressions-17.1.0.jar:/Users/jac/.m2/repository/io/cucumber/datatable/7.20.1/datatable-7.20.1.jar:/Users/jac/.m2/repository/io/cucumber/cucumber-plugin/7.20.1/cucumber-plugin-7.20.1.jar:/Users/jac/.m2/repository/io/cucumber/docstring/7.20.1/docstring-7.20.1.jar:/Users/jac/.m2/repository/io/cucumber/html-formatter/21.7.0/html-formatter-21.7.0.jar:/Users/jac/.m2/repository/io/cucumber/junit-xml-formatter/0.5.0/junit-xml-formatter-0.5.0.jar:/Users/jac/.m2/repository/io/cucumber/ci-environment/10.0.1/ci-environment-10.0.1.jar:/Users/jac/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/jac/.m2/repository/io/cucumber/cucumber-junit-platform-engine/7.20.1/cucumber-junit-platform-engine-7.20.1.jar:/Users/jac/.m2/repository/org/junit/platform/junit-platform-engine/1.11.3/junit-platform-engine-1.11.3.jar:/Users/jac/.m2/repository/org/drools/drools-ruleunits-engine/8.44.0.Final/drools-ruleunits-engine-8.44.0.Final.jar:/Users/jac/.m2/repository/org/drools/drools-ruleunits-dsl/8.44.0.Final/drools-ruleunits-dsl-8.44.0.Final.jar:/Users/jac/.m2/repository/org/drools/drools-canonical-model/8.44.0.Final/drools-canonical-model-8.44.0.Final.jar:/Users/jac/.m2/repository/org/drools/drools-model-compiler/8.44.0.Final/drools-model-compiler-8.44.0.Final.jar:/Users/jac/.m2/repository/org/kie/kie-api/8.44.0.Final/kie-api-8.44.0.Final.jar:/Users/jac/.m2/repository/org/kie/kie-internal/8.44.0.Final/kie-internal-8.44.0.Final.jar:/Users/jac/.m2/repository/org/kie/kie-util-maven-support/8.44.0.Final/kie-util-maven-support-8.44.0.Final.jar:/Users/jac/.m2/repository/org/drools/drools-wiring-api/8.44.0.Final/drools-wiring-api-8.44.0.Final.jar:/Users/jac/.m2/repository/org/kie/kie-memory-compiler/8.44.0.Final/kie-memory-compiler-8.44.0.Final.jar:/Users/jac/.m2/repository/org/drools/drools-core/8.44.0.Final/drools-core-8.44.0.Final.jar:/Users/jac/.m2/repository/org/kie/kie-util-xml/8.44.0.Final/kie-util-xml-8.44.0.Final.jar:/Users/jac/.m2/repository/org/drools/drools-base/8.44.0.Final/drools-base-8.44.0.Final.jar:/Users/jac/.m2/repository/org/drools/drools-wiring-static/8.44.0.Final/drools-wiring-static-8.44.0.Final.jar:/Users/jac/.m2/repository/org/drools/drools-io/8.44.0.Final/drools-io-8.44.0.Final.jar:/Users/jac/.m2/repository/commons-codec/commons-codec/1.15/commons-codec-1.15.jar:/Users/jac/.m2/repository/org/drools/drools-compiler/8.44.0.Final/drools-compiler-8.44.0.Final.jar:/Users/jac/.m2/repository/org/drools/drools-drl-parser/8.44.0.Final/drools-drl-parser-8.44.0.Final.jar:/Users/jac/.m2/repository/org/drools/drools-drl-extensions/8.44.0.Final/drools-drl-extensions-8.44.0.Final.jar:/Users/jac/.m2/repository/org/drools/drools-drl-ast/8.44.0.Final/drools-drl-ast-8.44.0.Final.jar:/Users/jac/.m2/repository/org/drools/drools-kiesession/8.44.0.Final/drools-kiesession-8.44.0.Final.jar:/Users/jac/.m2/repository/org/drools/drools-ecj/8.44.0.Final/drools-ecj-8.44.0.Final.jar:/Users/jac/.m2/repository/org/eclipse/jdt/ecj/3.33.0/ecj-3.33.0.jar:/Users/jac/.m2/repository/org/antlr/antlr-runtime/3.5.2/antlr-runtime-3.5.2.jar:/Users/jac/.m2/repository/org/drools/drools-ruleunits-impl/8.44.0.Final/drools-ruleunits-impl-8.44.0.Final.jar:/Users/jac/.m2/repository/org/drools/drools-ruleunits-api/8.44.0.Final/drools-ruleunits-api-8.44.0.Final.jar:/Users/jac/.m2/repository/org/drools/drools-model-codegen/8.44.0.Final/drools-model-codegen-8.44.0.Final.jar:/Users/jac/.m2/repository/org/drools/drools-util/8.44.0.Final/drools-util-8.44.0.Final.jar:/Users/jac/.m2/repository/org/drools/drools-codegen-common/8.44.0.Final/drools-codegen-common-8.44.0.Final.jar:/Users/jac/.m2/repository/com/github/javaparser/javaparser-core/3.24.2/javaparser-core-3.24.2.jar:/Users/jac/.m2/repository/org/drools/drools-mvel-parser/8.44.0.Final/drools-mvel-parser-8.44.0.Final.jar:/Users/jac/.m2/repository/org/drools/drools-mvel-compiler/8.44.0.Final/drools-mvel-compiler-8.44.0.Final.jar:/Users/jac/.m2/repository/org/slf4j/slf4j-api/1.7.30/slf4j-api-1.7.30.jar:/Users/jac/.m2/repository/org/junit/platform/junit-platform-suite/1.11.3/junit-platform-suite-1.11.3.jar:/Users/jac/.m2/repository/org/junit/platform/junit-platform-suite-api/1.11.3/junit-platform-suite-api-1.11.3.jar:/Users/jac/.m2/repository/org/junit/platform/junit-platform-suite-engine/1.11.3/junit-platform-suite-engine-1.11.3.jar:/Users/jac/.m2/repository/org/junit/platform/junit-platform-suite-commons/1.11.3/junit-platform-suite-commons-1.11.3.jar:/Users/jac/.m2/repository/org/junit/platform/junit-platform-launcher/1.11.3/junit-platform-launcher-1.11.3.jar:/Users/jac/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.11.3/junit-jupiter-api-5.11.3.jar:/Users/jac/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/jac/.m2/repository/org/junit/platform/junit-platform-commons/1.11.3/junit-platform-commons-1.11.3.jar:/Users/jac/.m2/repository/ch/qos/logback/logback-classic/1.2.9/logback-classic-1.2.9.jar:/Users/jac/.m2/repository/ch/qos/logback/logback-core/1.2.9/logback-core-1.2.9.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/Users/jac"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2024-07-16"/>
+    <property name="java.home" value="/Users/jac/.sdkman/candidates/java/17.0.12-sapmchn"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/Users/jac/Downloads/version_avec_cucumber"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="/Users/jac/Downloads/version_avec_cucumber/target/surefire/surefirebooter-20250210141801396_3.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.runtime.version" value="17.0.12+7-LTS"/>
+    <property name="user.name" value="jac"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="14.4.1"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="SapMachine"/>
+    <property name="localRepository" value="/Users/jac/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/SAP/SapMachine/issues/new"/>
+    <property name="java.io.tmpdir" value="/var/folders/lv/f8dfj8gd61bbcj5ymnvs059m0000gn/T/"/>
+    <property name="java.version" value="17.0.12"/>
+    <property name="user.dir" value="/Users/jac/Downloads/version_avec_cucumber"/>
+    <property name="os.arch" value="aarch64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/Users/jac/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="SAP SE"/>
+    <property name="java.vm.version" value="17.0.12+7-LTS"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.class.version" value="61.0"/>
+  </properties>
+  <testcase name="testDemandeMauvaiseBaseAdmission" classname="ca.uqam.info.mgl7460.tp3.drools.TestReglesAdmission" time="0.001">
+    <error message="Cannot invoke &quot;ca.uqam.info.mgl7460.tp3.types.FabriqueGestionAdmissions.creerEtudiant(String, String, String)&quot; because &quot;ca.uqam.info.mgl7460.tp3.drools.TestHarness.fabrique&quot; is null" type="java.lang.NullPointerException"><![CDATA[java.lang.NullPointerException: Cannot invoke "ca.uqam.info.mgl7460.tp3.types.FabriqueGestionAdmissions.creerEtudiant(String, String, String)" because "ca.uqam.info.mgl7460.tp3.drools.TestHarness.fabrique" is null
+	at ca.uqam.info.mgl7460.tp3.drools.TestHarness.creerDemandeMauvaiseBaseAdmission(TestHarness.java:201)
+	at ca.uqam.info.mgl7460.tp3.drools.TestReglesAdmission.testDemandeMauvaiseBaseAdmission(TestReglesAdmission.java:92)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></error>
+    <system-out><![CDATA[2025-02-10 14:18:02,030 [main] INFO  Creation de conteneur pour données pour admissions RÉUSSIE
+2025-02-10 14:18:02,031 [main] INFO  Creation de moteur pour admissions RÉUSSIE
+2025-02-10 14:18:02,031 [main] INFO  Insérer une demande d'admission mauvaise base d'admission
+BLABLABLABLABLABLABLABLA2
+null
+BLABLABLABLABLABLABLABLA2
+]]></system-out>
+  </testcase>
+  <testcase name="testDemandeRefuseeBaseCEGEPSansCoteR" classname="ca.uqam.info.mgl7460.tp3.drools.TestReglesAdmission" time="0.001">
+    <error message="Cannot invoke &quot;ca.uqam.info.mgl7460.tp3.types.FabriqueGestionAdmissions.creerEtudiant(String, String, String)&quot; because &quot;ca.uqam.info.mgl7460.tp3.drools.TestHarness.fabrique&quot; is null" type="java.lang.NullPointerException"><![CDATA[java.lang.NullPointerException: Cannot invoke "ca.uqam.info.mgl7460.tp3.types.FabriqueGestionAdmissions.creerEtudiant(String, String, String)" because "ca.uqam.info.mgl7460.tp3.drools.TestHarness.fabrique" is null
+	at ca.uqam.info.mgl7460.tp3.drools.TestHarness.creerDemandeRefuseeBaseCEGEPSansCoteR(TestHarness.java:59)
+	at ca.uqam.info.mgl7460.tp3.drools.TestReglesAdmission.testDemandeRefuseeBaseCEGEPSansCoteR(TestReglesAdmission.java:38)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></error>
+    <system-out><![CDATA[2025-02-10 14:18:02,033 [main] INFO  Insérer une demande d'admission avec base d'admission CEGEP sans cote R
+]]></system-out>
+  </testcase>
+  <testcase name="testDemandeDossierVide" classname="ca.uqam.info.mgl7460.tp3.drools.TestReglesAdmission" time="0.001">
+    <error message="Cannot invoke &quot;ca.uqam.info.mgl7460.tp3.types.FabriqueGestionAdmissions.creerEtudiant(String, String, String)&quot; because &quot;ca.uqam.info.mgl7460.tp3.drools.TestHarness.fabrique&quot; is null" type="java.lang.NullPointerException"><![CDATA[java.lang.NullPointerException: Cannot invoke "ca.uqam.info.mgl7460.tp3.types.FabriqueGestionAdmissions.creerEtudiant(String, String, String)" because "ca.uqam.info.mgl7460.tp3.drools.TestHarness.fabrique" is null
+	at ca.uqam.info.mgl7460.tp3.drools.TestHarness.creerDemandeDossierVide(TestHarness.java:243)
+	at ca.uqam.info.mgl7460.tp3.drools.TestReglesAdmission.testDemandeDossierVide(TestReglesAdmission.java:73)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></error>
+    <system-out><![CDATA[2025-02-10 14:18:02,034 [main] INFO  Insérer une demande d'admission dossier vide
+]]></system-out>
+  </testcase>
+  <testcase name="testDemandeMoyennePlusfaibleCriteresAdmission" classname="ca.uqam.info.mgl7460.tp3.drools.TestReglesAdmission" time="0.0">
+    <error message="Cannot invoke &quot;ca.uqam.info.mgl7460.tp3.types.FabriqueGestionAdmissions.creerEtudiant(String, String, String)&quot; because &quot;ca.uqam.info.mgl7460.tp3.drools.TestHarness.fabrique&quot; is null" type="java.lang.NullPointerException"><![CDATA[java.lang.NullPointerException: Cannot invoke "ca.uqam.info.mgl7460.tp3.types.FabriqueGestionAdmissions.creerEtudiant(String, String, String)" because "ca.uqam.info.mgl7460.tp3.drools.TestHarness.fabrique" is null
+	at ca.uqam.info.mgl7460.tp3.drools.TestHarness.creerDemandeMoyennePlusfaibleQueCriteresAdmission(TestHarness.java:118)
+	at ca.uqam.info.mgl7460.tp3.drools.TestReglesAdmission.testDemandeMoyennePlusfaibleCriteresAdmission(TestReglesAdmission.java:129)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></error>
+    <system-out><![CDATA[2025-02-10 14:18:02,036 [main] INFO  Insérer une demande d'admission avec moyenne plus faible que les critères d'admission
+]]></system-out>
+  </testcase>
+  <testcase name="testDemandeDocumentFrauduleux" classname="ca.uqam.info.mgl7460.tp3.drools.TestReglesAdmission" time="0.001">
+    <error message="Cannot invoke &quot;ca.uqam.info.mgl7460.tp3.types.FabriqueGestionAdmissions.creerEtudiant(String, String, String)&quot; because &quot;ca.uqam.info.mgl7460.tp3.drools.TestHarness.fabrique&quot; is null" type="java.lang.NullPointerException"><![CDATA[java.lang.NullPointerException: Cannot invoke "ca.uqam.info.mgl7460.tp3.types.FabriqueGestionAdmissions.creerEtudiant(String, String, String)" because "ca.uqam.info.mgl7460.tp3.drools.TestHarness.fabrique" is null
+	at ca.uqam.info.mgl7460.tp3.drools.TestHarness.creerDemandeFrauduleuse(TestHarness.java:89)
+	at ca.uqam.info.mgl7460.tp3.drools.TestReglesAdmission.testDemandeDocumentFrauduleux(TestReglesAdmission.java:55)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></error>
+    <system-out><![CDATA[2025-02-10 14:18:02,037 [main] INFO  Insérer une demande d'admission frauduleuse
+]]></system-out>
+  </testcase>
+  <testcase name="testDemandeAcceptee" classname="ca.uqam.info.mgl7460.tp3.drools.TestReglesAdmission" time="0.001">
+    <error message="Cannot invoke &quot;ca.uqam.info.mgl7460.tp3.types.FabriqueGestionAdmissions.creerEtudiant(String, String, String)&quot; because &quot;ca.uqam.info.mgl7460.tp3.drools.TestHarness.fabrique&quot; is null" type="java.lang.NullPointerException"><![CDATA[java.lang.NullPointerException: Cannot invoke "ca.uqam.info.mgl7460.tp3.types.FabriqueGestionAdmissions.creerEtudiant(String, String, String)" because "ca.uqam.info.mgl7460.tp3.drools.TestHarness.fabrique" is null
+	at ca.uqam.info.mgl7460.tp3.drools.TestHarness.creerDemandeAdmissionAcceptee(TestHarness.java:29)
+	at ca.uqam.info.mgl7460.tp3.drools.TestReglesAdmission.testDemandeAcceptee(TestReglesAdmission.java:147)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></error>
+    <system-out><![CDATA[2025-02-10 14:18:02,038 [main] INFO  Insérer une demande d'admission qui sera acceptée
+]]></system-out>
+  </testcase>
+  <testcase name="testDemandeBaseExperienceSansPreuve" classname="ca.uqam.info.mgl7460.tp3.drools.TestReglesAdmission" time="0.001">
+    <error message="Cannot invoke &quot;ca.uqam.info.mgl7460.tp3.types.FabriqueGestionAdmissions.creerEtudiant(String, String, String)&quot; because &quot;ca.uqam.info.mgl7460.tp3.drools.TestHarness.fabrique&quot; is null" type="java.lang.NullPointerException"><![CDATA[java.lang.NullPointerException: Cannot invoke "ca.uqam.info.mgl7460.tp3.types.FabriqueGestionAdmissions.creerEtudiant(String, String, String)" because "ca.uqam.info.mgl7460.tp3.drools.TestHarness.fabrique" is null
+	at ca.uqam.info.mgl7460.tp3.drools.TestHarness.creerDemandeBaseExperienceSansPreuve(TestHarness.java:160)
+	at ca.uqam.info.mgl7460.tp3.drools.TestReglesAdmission.testDemandeBaseExperienceSansPreuve(TestReglesAdmission.java:111)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></error>
+    <system-out><![CDATA[2025-02-10 14:18:02,039 [main] INFO  Insérer une demande d'admission base experience sans attestation d'emploi
+]]></system-out>
+  </testcase>
+</testsuite>
