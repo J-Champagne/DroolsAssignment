@@ -11,14 +11,17 @@ public class EtudiantImpl implements Etudiant {
 
     public EtudiantImpl(String codePermanent, String prenom, String nom) {}
 
+    @Override
     public String getCodePermanent() {
         return codePermanent;
     }
 
+    @Override
     public String getPrenom() {
         return prenom;
     }
 
+    @Override
     public String getNom() {
         return nom;
     }
