@@ -7,13 +7,29 @@ import java.util.Collection;
 import java.util.List;
 
 public class DossierAdmissionImpl implements DossierAdmission {
-    private Etudiant candidat;
     private List<DocumentAdmission> listeDocumentAdmission = new ArrayList<>();
+    private Etudiant candidat;
+    private Programme programme;
+    private SessionAdmission sessionAdmission;
+    private BaseAdmission baseAdmission;
+    private DossierAdmission dossierAdmission;
+    private DecisionAdmission decisionAdmission;
+    private int coteR;
+    private float moyennePourBaseAdmission;
 
     DossierAdmissionImpl() {}
 
-    DossierAdmissionImpl(Etudiant candidat) {
+    DossierAdmissionImpl(Etudiant candidat, Programme programme, SessionAdmission sessionAdmission,
+                            BaseAdmission baseAdmission, DossierAdmission dossierAdmission,
+                            DecisionAdmission decisionAdmission, int coteR, float moyennePourBaseAdmission) {
         this.candidat = candidat;
+        this.programme = programme;
+        this.sessionAdmission = sessionAdmission;
+        this.baseAdmission = baseAdmission;
+        this.dossierAdmission = dossierAdmission;
+        this.decisionAdmission = decisionAdmission;
+        this.coteR = coteR;
+        this.moyennePourBaseAdmission = moyennePourBaseAdmission;
     }
 
     @Override
