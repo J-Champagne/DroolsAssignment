@@ -12,6 +12,10 @@ public class DossierAdmissionImpl implements DossierAdmission {
 
     DossierAdmissionImpl() {}
 
+    DossierAdmissionImpl(Etudiant candidat) {
+        this.candidat = candidat;
+    }
+
     @Override
     public Etudiant getCandidat() {
         return this.candidat;
