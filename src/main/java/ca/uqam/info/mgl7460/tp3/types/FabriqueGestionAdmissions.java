@@ -2,6 +2,8 @@ package ca.uqam.info.mgl7460.tp3.types;
 
 //import ca.uqam.info.mgl7460.tp3.impl.FabriqueGestionAdmissionsImpl;
 
+import ca.uqam.info.mgl7460.tp3.impl.FabriqueGestionAdmissionsImpl;
+
 public interface FabriqueGestionAdmissions {
 
 	public Etudiant creerEtudiant(String nom, String prenom, String codePermanent);
@@ -22,5 +24,11 @@ public interface FabriqueGestionAdmissions {
 	
 	public DecisionAdmission creerDecisionAdmission(LibelleDecision libelle);
 	
-	public FabriqueGestionAdmissions getSingleton();
+	public static FabriqueGestionAdmissions getSingleton() {
+		return FabriqueGestionAdmissionsHolder.INSTANCE;
+	}
+
+	class FabriqueGestionAdmissionsHolder {
+		private static final FabriqueGestionAdmissions INSTANCE = new FabriqueGestionAdmissionsImpl();
+	}
 }
