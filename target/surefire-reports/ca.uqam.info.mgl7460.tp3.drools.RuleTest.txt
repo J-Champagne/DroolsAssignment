@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: ca.uqam.info.mgl7460.tp3.drools.RuleTest
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.021 s -- in ca.uqam.info.mgl7460.tp3.drools.RuleTest

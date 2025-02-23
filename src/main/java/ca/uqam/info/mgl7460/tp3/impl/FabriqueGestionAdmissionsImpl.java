@@ -5,6 +5,8 @@ import ca.uqam.info.mgl7460.tp3.types.*;
 public class FabriqueGestionAdmissionsImpl implements FabriqueGestionAdmissions {
     private static FabriqueGestionAdmissions instance;
 
+    private FabriqueGestionAdmissionsImpl() {}
+
     @Override
     public Etudiant creerEtudiant(String nom, String prenom, String codePermanent) {
         return new EtudiantImpl(nom, prenom, codePermanent);
@@ -51,7 +53,11 @@ public class FabriqueGestionAdmissionsImpl implements FabriqueGestionAdmissions 
     }
 
     @Override
-    public FabriqueGestionAdmissions getSingleton() {
+    public static FabriqueGestionAdmissions getSingleton() {
+        return getInstance();
+    }
+
+    public static FabriqueGestionAdmissions getInstance() {
         if (instance == null) {
             instance = new FabriqueGestionAdmissionsImpl();
         }
