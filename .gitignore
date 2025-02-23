@@ -28,4 +28,4 @@ replay_pid*
 # Other folders
 .idea/
 target/
-/.project
+./project
