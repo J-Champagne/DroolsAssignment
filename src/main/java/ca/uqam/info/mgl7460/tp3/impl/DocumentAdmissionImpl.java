@@ -14,9 +14,13 @@ public class DocumentAdmissionImpl implements DocumentAdmission {
 
     DocumentAdmissionImpl() {}
 
+    DocumentAdmissionImpl(TypeDocumentAdmission typeDocumentAdmission) {
+        this.typeDocumentAdmission = typeDocumentAdmission;
+    }
+
     DocumentAdmissionImpl(TypeDocumentAdmission typeDocumentAdmission, StatutVerificationDocument
                 statutVerificationDocument) {
-        this.typeDocumentAdmission = typeDocumentAdmission;
+        this(typeDocumentAdmission);
         this.statutVerificationDocument = statutVerificationDocument;
     }
 

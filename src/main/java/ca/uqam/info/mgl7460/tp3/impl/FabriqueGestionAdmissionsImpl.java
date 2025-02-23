@@ -32,22 +32,22 @@ public class FabriqueGestionAdmissionsImpl implements FabriqueGestionAdmissions 
 
     @Override
     public DossierAdmission creerDossierAdmission(Etudiant candidat) {
-        return null;
+        return new DossierAdmissionImpl(candidat);
     }
 
     @Override
     public DocumentAdmission creerDocumentAdmission(TypeDocumentAdmission typeD) {
-        return null;
+        return new DocumentAdmissionImpl(typeD);
     }
 
     @Override
     public CritereAdmission creerCritereAdmission() {
-        return null;
+        return new CritereAdmissionImpl();
     }
 
     @Override
     public DecisionAdmission creerDecisionAdmission(LibelleDecision libelle) {
-        return null;
+        return new DecisionAdmissionImpl(libelle);
     }
 
     @Override

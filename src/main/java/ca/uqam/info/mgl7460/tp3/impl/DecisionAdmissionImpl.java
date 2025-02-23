@@ -17,9 +17,13 @@ public class DecisionAdmissionImpl implements DecisionAdmission {
 
     DecisionAdmissionImpl() {}
 
+    DecisionAdmissionImpl(LibelleDecision libelleDecision) {
+        this.libelleDecision = libelleDecision;
+    }
+
     DecisionAdmissionImpl(LibelleDecision libelleDecision, ConditionAdmission conditionAdmission,
                             String commentaireDecision, boolean decisionConforme) {
-        this.libelleDecision = libelleDecision;
+        this(libelleDecision);
         this.conditionAdmission = conditionAdmission;
         this.commentaireDecision = commentaireDecision;
         this.decisionConforme = decisionConforme;
