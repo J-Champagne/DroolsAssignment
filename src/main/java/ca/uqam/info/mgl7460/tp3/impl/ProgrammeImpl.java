@@ -16,9 +16,13 @@ public class ProgrammeImpl implements Programme {
 
     ProgrammeImpl() {}
 
-    ProgrammeImpl(String nom, String numero, String description, int credit) {
+    ProgrammeImpl(String nom, String numero) {
         this.nom = nom;
         this.numero = numero;
+    }
+
+    ProgrammeImpl(String nom, String numero, String description, int credit) {
+        this(nom, numero);
         this.description = description;
         this.credit = credit;
     }

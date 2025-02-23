@@ -42,6 +42,11 @@ public class DecisionAdmissionImpl implements DecisionAdmission {
     }
 
     @Override
+    public void setDecision(LibelleDecision libelleDecision) {
+        this.libelleDecision = libelleDecision;
+    }
+
+    @Override
     public ConditionAdmission getConditionAdmission() {
         return this.conditionAdmission;
     }

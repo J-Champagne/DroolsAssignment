@@ -7,6 +7,8 @@ public interface DecisionAdmission {
 	public Date getDateDecision();
 	
 	public LibelleDecision getDecision();
+
+	public void setDecision(LibelleDecision decision);
 	
 	public ConditionAdmission getConditionAdmission();
 	
@@ -23,8 +25,6 @@ public interface DecisionAdmission {
 	public boolean isDecisionConforme();
 	
 	public void setDecisionConforme(boolean vraiIOuFaux);
-
-
 }
 
 

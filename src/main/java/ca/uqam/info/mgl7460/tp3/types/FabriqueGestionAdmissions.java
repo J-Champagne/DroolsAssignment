@@ -22,11 +22,5 @@ public interface FabriqueGestionAdmissions {
 	
 	public DecisionAdmission creerDecisionAdmission(LibelleDecision libelle);
 	
-	public static FabriqueGestionAdmissions getSingleton() {
-		FabriqueGestionAdmissions fabrique = null;
-//		fabrique = FabriqueGestionAdmissionsImpl.getSingleton();
-
-		return fabrique;
-	}
-
+	public FabriqueGestionAdmissions getSingleton();
 }
