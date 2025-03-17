@@ -20,6 +20,8 @@ public class DemandeAdmissionImpl implements DemandeAdmission {
         this.candidat = candidat;
         this.programme = programme;
         this.sessionAdmission = sessionAdmission;
+        this.dossierAdmission = new DossierAdmissionImpl(candidat);
+        this.decisionAdmission = new DecisionAdmissionImpl();
     }
 
     public DemandeAdmissionImpl(Etudiant candidat, Programme programme, SessionAdmission sessionAdmission,

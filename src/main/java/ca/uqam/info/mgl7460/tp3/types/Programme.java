@@ -15,8 +15,7 @@ public interface Programme {
 	public int getNombreCredits();
 	
 	public void setNombreCredits(int nombre);
-	
-	
+
 	public Collection<CritereAdmission> getCriteresAdmission();
 	
 	public void ajouteCritereAdmission(CritereAdmission critere);

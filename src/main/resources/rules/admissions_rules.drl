@@ -1,0 +1,37 @@
+package ca.uqam.info.mgl7460.tp3.drools;
+
+
+unit AdmissionsRuleUnitData;
+
+import java.util.*
+import ca.uqam.info.mgl7460.tp3.types.LibelleDecision
+import ca.uqam.info.mgl7460.tp3.types.MotifRefus
+import ca.uqam.info.mgl7460.tp3.types.DocumentAdmission
+import ca.uqam.info.mgl7460.tp3.types.StatutVerificationDocument
+import ca.uqam.info.mgl7460.tp3.types.CritereAdmission
+import ca.uqam.info.mgl7460.tp3.types.SessionAdmission
+import ca.uqam.info.mgl7460.tp3.types.DemandeAdmission
+import ca.uqam.info.mgl7460.tp3.types.DecisionAdmission
+import ca.uqam.info.mgl7460.tp3.types.Programme
+
+
+import ca.uqam.info.mgl7460.tp3.impl.DemandeAdmissionImpl
+import ca.uqam.info.mgl7460.tp3.impl.EtudiantImpl
+import ca.uqam.info.mgl7460.tp3.impl.ProgrammeImpl
+import ca.uqam.info.mgl7460.tp3.impl.FabriqueGestionAdmissionsImpl
+import ca.uqam.info.mgl7460.tp3.impl.DocumentAdmissionImpl
+import ca.uqam.info.mgl7460.tp3.impl.DecisionAdmissionImpl
+import ca.uqam.info.mgl7460.tp3.types.TypeDocumentAdmission
+import ca.uqam.info.mgl7460.tp3.types.StatutVerificationDocument
+
+rule "refuse demande si moyenne base admission inférieure aux exigences des criteres admission"
+when
+    da: /demandesAdmission[ moyennePourBaseAdmission < 999 ]
+    //DemandeAdmission(d : decisionAdmission, m : moyennePourBaseAdmission, p : getProgramme())
+
+then
+    da.getDecisionAdmission().setDecision(LibelleDecision.RefusMotive);
+    da.getDecisionAdmission().setMotifRefus(MotifRefus.ResultatsScolairesTropFaibles);
+    update(da);
+end
+// à compléter
