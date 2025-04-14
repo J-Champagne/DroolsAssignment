@@ -11,7 +11,7 @@ public class DecisionAdmissionImpl implements DecisionAdmission {
     Date dateDecision = new Date();
     LibelleDecision libelleDecision;
     ConditionAdmission conditionAdmission;
-    MotifRefus motifRefus;
+    MotifRefus motifRefus = null;
     String commentaireDecision;
     Boolean decisionConforme;
 

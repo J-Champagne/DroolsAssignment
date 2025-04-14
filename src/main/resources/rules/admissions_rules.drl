@@ -1,10 +1,9 @@
 package ca.uqam.info.mgl7460.tp3.drools;
 
-
 unit AdmissionsRuleUnitData;
 
-import java.util.*
 import ca.uqam.info.mgl7460.tp3.types.LibelleDecision
+import ca.uqam.info.mgl7460.tp3.types.BaseAdmission
 import ca.uqam.info.mgl7460.tp3.types.MotifRefus
 import ca.uqam.info.mgl7460.tp3.types.DocumentAdmission
 import ca.uqam.info.mgl7460.tp3.types.StatutVerificationDocument
@@ -14,8 +13,8 @@ import ca.uqam.info.mgl7460.tp3.types.DemandeAdmission
 import ca.uqam.info.mgl7460.tp3.types.DecisionAdmission
 import ca.uqam.info.mgl7460.tp3.types.Programme
 
-
 import ca.uqam.info.mgl7460.tp3.impl.DemandeAdmissionImpl
+import ca.uqam.info.mgl7460.tp3.impl.CritereAdmissionImpl
 import ca.uqam.info.mgl7460.tp3.impl.EtudiantImpl
 import ca.uqam.info.mgl7460.tp3.impl.ProgrammeImpl
 import ca.uqam.info.mgl7460.tp3.impl.FabriqueGestionAdmissionsImpl
@@ -24,14 +23,83 @@ import ca.uqam.info.mgl7460.tp3.impl.DecisionAdmissionImpl
 import ca.uqam.info.mgl7460.tp3.types.TypeDocumentAdmission
 import ca.uqam.info.mgl7460.tp3.types.StatutVerificationDocument
 
-rule "refuse demande si moyenne base admission inférieure aux exigences des criteres admission"
+salience 10
+rule "Demande refusée si moyenne base admission inférieure aux exigences des criteres admission"
 when
-    da: /demandesAdmission[ moyennePourBaseAdmission < 999 ]
-    //DemandeAdmission(d : decisionAdmission, m : moyennePourBaseAdmission, p : getProgramme())
-
+    da: /demandesAdmission[ p: programme, m: moyennePourBaseAdmission, ba: baseAdmission]
+    CritereAdmission(ba == baseAdmission && moyenneMinimale > m) from p.criteresAdmission
 then
     da.getDecisionAdmission().setDecision(LibelleDecision.RefusMotive);
     da.getDecisionAdmission().setMotifRefus(MotifRefus.ResultatsScolairesTropFaibles);
+    da.getDecisionAdmission().setDecisionConforme(false);
     update(da);
 end
-// à compléter
+
+salience 10
+rule "Demande refusée si la base d'admission est d'un CEGEP et qu'il n'y a pas de cote R"
+when
+    da: /demandesAdmission[ coteR == 0 && baseAdmission == BaseAdmission.CEGEP ]
+then
+    da.getDecisionAdmission().setMotifRefus(MotifRefus.DossierIncomplet);
+    da.getDecisionAdmission().setDecision(LibelleDecision.RefusMotive);
+    da.getDecisionAdmission().setDecisionConforme(false);
+    update(da);
+end
+
+salience 10
+rule "Demande refusée si la demande est frauduleuse"
+when
+    da: /demandesAdmission[ dossier: dossierAdmission ]
+    DocumentAdmission(statutVerificationDocument == StatutVerificationDocument.Frauduleux) from dossier.listeDocumentAdmission
+then
+    da.getDecisionAdmission().setDecision(LibelleDecision.RefusMotive);
+    da.getDecisionAdmission().setDecisionConforme(false);
+    update(da);
+end
+
+salience 10
+rule  "Demande refusée si dossier incomplet"
+when
+    da: /demandesAdmission[ dossierAdmission.listeDocumentAdmission.isEmpty() ]
+then
+    da.getDecisionAdmission().setMotifRefus(MotifRefus.DossierIncomplet);
+    da.getDecisionAdmission().setDecision(LibelleDecision.RefusMotive);
+    da.getDecisionAdmission().setDecisionConforme(false);
+    update(da);
+end
+
+salience 10
+rule "Demande refusée à cause d'une mauvaise base d'admission"
+when
+    da: /demandesAdmission[ p: programme, base: baseAdmission ]
+    not(CritereAdmission(baseAdmission == base) from p.criteresAdmission)
+then
+    da.getDecisionAdmission().setMotifRefus(MotifRefus.RefusPourAutreMotif);
+    da.getDecisionAdmission().setDecision(LibelleDecision.RefusMotive);
+    da.getDecisionAdmission().setCommentairesDecision("Ce programme n'admet pas sur la base " + da.getBaseAdmission());
+    da.getDecisionAdmission().setDecisionConforme(false);
+    update(da);
+end
+
+salience 10
+rule "Demande refusée à cause d'un manque de preuve d'expérience professionelle"
+when
+    da: /demandesAdmission[ dossier: dossierAdmission, p:programme ]
+    CritereAdmission(baseAdmission == BaseAdmission.Experience) from p.criteresAdmission
+    DocumentAdmission(typeDocumentAdmission != TypeDocumentAdmission.AttestationEmploi) from dossier.listeDocumentAdmission
+then
+    da.getDecisionAdmission().setMotifRefus(MotifRefus.DossierIncomplet);
+    da.getDecisionAdmission().setDecision(LibelleDecision.RefusMotive);
+    da.getDecisionAdmission().setDecisionConforme(false);
+    update(da);
+end
+
+salience 5
+rule "Demande acceptée"
+when
+    da: /demandesAdmission[ decisionAdmission.motifRefus == null ]
+then
+    da.getDecisionAdmission().setDecision(LibelleDecision.AdmissionDefinitive);
+    da.getDecisionAdmission().setCommentairesDecision("Félicitations!");
+    da.getDecisionAdmission().setDecisionConforme(true);
+end

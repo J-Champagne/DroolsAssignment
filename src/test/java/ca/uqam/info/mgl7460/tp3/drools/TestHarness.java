@@ -187,17 +187,13 @@ public class TestHarness {
 		demande.ajouterDocumentAdmission(lettreMotivation);
 		
 		// retourner la demande
-		System.out.println("BLABLABLABLABLABLABLABLA");
 		System.out.println(fabrique);
-		System.out.println("BLABLABLABLABLABLABLABLA");
 		return demande;
     }
 
     public static DemandeAdmission creerDemandeMauvaiseBaseAdmission() {
 		// creer un étudiant
-		System.out.println("BLABLABLABLABLABLABLABLA2");
 		System.out.println(fabrique);
-		System.out.println("BLABLABLABLABLABLABLABLA2");
 		Etudiant flye = fabrique.creerEtudiant("Pierre", "Poilievre", "POIP03067901");
 		
 		// créer un programme acceptant Bacc ou Maitrise comme base d'admission
